@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelBloom</title>
-    <link rel="stylesheet" href="travel_recommendation.css">
+    <title>Traveltastic</title>
+    <link rel="stylesheet" href="./travel_recommendation.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">✈ TravelBloom</div>
+        <div class="logo">✈ Traveltastic</div>
         <ul>
             <li><a href="#" id="nav-home">Home</a></li>
             <li><a href="#" id="nav-about">About Us</a></li>
             <li><a href="#" id="nav-contact">Contact Us</a></li>
         </ul>
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+            <input type="text" id="searchInput" placeholder="Search destinations, beaches, temples...">
             <button id="searchBtn">Search</button>
             <button id="clearBtn">Clear</button>
         </div>
     </nav>
 
-    <!-- Full hero section (homepage default) -->
+    <!-- Full hero section -->
     <section class="hero" id="heroSection">
         <div class="hero-text" id="heroText">
             <h1>EXPLORE<br>DREAM<br>DESTINATION</h1>
             <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
             <button class="book-btn">BOOK NOW</button>
         </div>
+        
+        <!-- Social Media Icons -->
+        <div class="social-media">
+            <a href="#" class="social-icon" title="Youtube">▶️</a>
+            <a href="#" class="social-icon" title="X">✖️</a>
+        </div>
     </section>
-
     <script src="travel_recommendation.js"></script>
 </body>
 </html>

@@ -1,111 +1,420 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-}
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #222;
-    padding: 1em;
-    color: white;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        line-height: 1.6;
+    }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        padding: 1em 2em;
+        color: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 1000;
+    }
 
-.search-container {
-    display: flex;
-    gap: 5px;
-}
+    .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+    }
 
-.search-container input {
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-}
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+    }
 
-.search-container button {
-    padding: 5px 10px;
-    border: none;
-    background-color: teal;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        padding: 0.5em 1em;
+        border-radius: 25px;
+    }
 
-/* Full-width hero background */
-.hero {
-    position: relative;
-    height: calc(100vh - 60px);
-    background: url('./website_images/bora-bora-tahiti-polynesia.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 3em;
-    box-sizing: border-box;
-}
+    .navbar a:hover {
+        background-color: rgba(255,255,255,0.1);
+        transform: translateY(-2px);
+    }
 
-.hero-text {
-    color: white;
-    max-width: 500px;
-}
+    .search-container {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        background: rgba(255,255,255,0.1);
+        padding: 8px;
+        border-radius: 30px;
+        backdrop-filter: blur(10px);
+    }
 
-.book-btn {
-    padding: 10px 20px;
-    background-color: teal;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 1em;
-}
+    .search-container input {
+        padding: 12px 20px;
+        border-radius: 25px;
+        border: none;
+        background: white;
+        color: #333;
+        font-size: 14px;
+        width: 250px;
+        outline: none;
+        transition: all 0.3s ease;
+    }
 
-/* Search results panel on right */
-.search-results {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    background-color: white;
-    padding: 2em;
-    overflow-y: auto;
-}
+    .search-container input:focus {
+        box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        transform: scale(1.02);
+    }
 
-/* About/Contact overlay */
-.overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,0.6);
-    padding: 2em;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    max-width: 600px;
-}
+    .search-container button {
+        padding: 12px 20px;
+        border: none;
+        background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+        color: white;
+        cursor: pointer;
+        border-radius: 25px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        min-width: 80px;
+    }
 
-.destination {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-}
+    .search-container button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(238, 90, 82, 0.4);
+    }
 
-.destination img {
-    width: 100%;
-    height: auto;
-}
+    .search-container #clearBtn {
+        background: linear-gradient(45deg, #74b9ff, #0984e3);
+    }
+
+    .search-container #clearBtn:hover {
+        box-shadow: 0 5px 15px rgba(116, 185, 255, 0.4);
+    }
+
+    .hero {
+        position: relative;
+        height: calc(100vh - 80px);
+        background: 
+            linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+            url('./website_images/kyoto.jpg') no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 4em;
+        background-attachment: fixed;
+    }
+
+    .hero-text {
+        color: white;
+        max-width: 600px;
+        animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-text h1 {
+        font-size: 4em;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 0.5em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .hero-text p {
+        font-size: 1.2em;
+        margin-bottom: 2em;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .book-btn {
+        padding: 15px 40px;
+        background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: 600;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .book-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(238, 90, 82, 0.4);
+    }
+
+    .social-media {
+        position: absolute;
+        bottom: 30px;
+        left: 4em;
+        display: flex;
+        gap: 20px;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .social-icon:hover {
+        background: rgba(255,255,255,0.2);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .search-results {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 2em;
+        overflow-y: auto;
+        backdrop-filter: blur(10px);
+        border-left: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .search-results h2 {
+        color: white;
+        margin-bottom: 1.5em;
+        font-size: 1.8em;
+    }
+
+    .overlay-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0,0,0,0.85);
+        padding: 3em;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        max-width: 800px;
+        max-height: 80vh;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255,255,255,0.3) transparent;
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255,255,255,0.1);
+        animation: fadeIn 0.5s ease-out;
+    }
+    
+    .overlay-content::-webkit-scrollbar {
+        width: 8px;
+    }
+    .overlay-content::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.3);
+        border-radius: 4px;
+    }
+    .overlay-content::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+
+    .overlay-content h1 {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        background: linear-gradient(45deg, #ff6b6b, #74b9ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .overlay-content h2 {
+        color: #74b9ff;
+        margin: 1.5em 0 1em 0;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2em;
+        margin-top: 2em;
+    }
+
+    .team-member {
+        background: rgba(255,255,255,0.1);
+        padding: 1.5em;
+        border-radius: 15px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+        transform: translateY(-5px);
+    }
+
+    .team-member h3 {
+        color: #ff6b6b;
+        margin-bottom: 0.5em;
+    }
+
+    .contact-form {
+        background: rgba(255,255,255,0.1);
+        padding: 2em;
+        border-radius: 15px;
+        margin-top: 1.5em;
+        backdrop-filter: blur(10px);
+    }
+
+    .form-group {
+        margin-bottom: 1.5em;
+        text-align: left;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5em;
+        color: #74b9ff;
+        font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: none;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.9);
+        color: #333;
+        font-size: 14px;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        background: white;
+        box-shadow: 0 0 15px rgba(116, 185, 255, 0.3);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .submit-btn {
+        background: linear-gradient(45deg, #74b9ff, #0984e3);
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(116, 185, 255, 0.4);
+    }
+
+    .destination {
+        margin-bottom: 25px;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .destination:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .destination img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .destination-content {
+        padding: 1.5em;
+    }
+
+    .destination h3 {
+        color: #333;
+        margin-bottom: 0.5em;
+        font-size: 1.3em;
+    }
+
+    .destination p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -60%);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .search-container input {
+            width: 200px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5em;
+        }
+
+        .search-results {
+            width: 100%;
+            position: relative;
+            height: auto;
+        }
+
+        .social-media {
+            position: static;
+            justify-content: center;
+            margin-top: 2em;
+        }
+    }
