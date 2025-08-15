@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Triptastic</title>
-  <link rel="stylesheet" href="./travel_recommendation.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom</title>
+    <link rel="stylesheet" href="travel_recommendation.css">
 </head>
 <body>
-  <nav><h1>Triptastic</h1>
-    <ul>
-        <li><a href="./index.html" id="home">Home </a></li>
-        <li><a href="./about-us.html" id="about-us">About Us </a></li>
-        <li><a href="./contact-us.html" id="contact-us">Contact Us </a></li>
-        <li><input type="text" id="conditionInput" placeholder="Enter a keyword">  </li>
-        <li><button id='btnSearch'>Search</button></li>
-        <li><button id='Reset'>Reset</button></li>
-
-    </ul>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">✈ TravelBloom</div>
+        <ul>
+            <li><a href="#" id="nav-home">Home</a></li>
+            <li><a href="#" id="nav-about">About Us</a></li>
+            <li><a href="#" id="nav-contact">Contact Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+            <button id="searchBtn">Search</button>
+            <button id="clearBtn">Clear</button>
+        </div>
     </nav>
 
+    <!-- Two-column template -->
+    <main id="content">
+        <!-- Left hero section -->
+        <section class="left-section">
+            <h1>EXPLORE<br>DREAM<br>DESTINATION</h1>
+            <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+            <button class="book-btn">BOOK NOW</button>
+        </section>
+
+        <!-- Right section updates dynamically -->
+        <section class="right-section" id="rightContent">
+            <p>Please enter a valid search query.</p>
+        </section>
+    </main>
+
+    <script src="travel_recommendation.js"></script>
 </body>
 </html>
